@@ -5,19 +5,26 @@ import {Provider} from 'react-redux';
 
 import Posts from './components/Post'
 import PostForm from './components/PostForm'
+import store from './store'
 
-function App() {
-  return (
-    <Provider store={store}>
-    <div className="App">
-      <header className="App-header">
-        <PostForm />
-        <Posts />
-        <hr/>
-      </header>
-    </div>
-    </Provider>
-  );
+import React, { Component } from 'react'
+
+
+export default class App extends Component {
+  render() {
+    return (
+      <Provider store={store}>
+      <div className="App">
+        <header className="App-header">
+          <PostForm />
+          <Posts />
+          <hr/>
+        </header>
+      </div>
+      </Provider>
+    )
+  }
 }
+
 
 export default App;
